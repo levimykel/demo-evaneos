@@ -1,0 +1,10 @@
+.article-internal-block
+  .article-internal-block__title !{RichText.asText(slice.primary.accroche)}
+  != RichText.asText(slice.primary['sous-titre'])
+  form.article-internal-block__form
+    .form-item.js-subscribeform-hideondone
+      input.article-internal-block__form__input(type='email', placeholder=slice.primary.email_placeholder, required='')
+    //.form-item.js-subscribeform-hideondone
+      input.btn.btn-primary.article-internal-block__form__submit(type='submit', href=Link.url(slice.primary.fichier), value=slice.primary.libelle_du_bouton)
+    .form-item.js-subscribeform-hideondone
+      a.btn.btn-primary.article-internal-block__form__submit(href=Link.url(slice.primary.fichier), target='_blank', style='display:block;') !{slice.primary.libelle_du_bouton}

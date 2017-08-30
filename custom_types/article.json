@@ -1,0 +1,203 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "URL Slug",
+        "placeholder" : "seo-friendly-slug"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title",
+        "placeholder" : "Title"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "Description"
+      }
+    },
+    "hero_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 725,
+          "height" : 340
+        },
+        "thumbnails" : [ {
+          "name" : "Mobile",
+          "width" : 170,
+          "height" : 350
+        }, {
+          "name" : "thumb",
+          "width" : 118,
+          "height" : 118
+        } ],
+        "label" : "Hero image"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "texte" : {
+            "type" : "Slice",
+            "fieldset" : "Texte",
+            "description" : "Texte riche",
+            "icon" : "short_text",
+            "non-repeat" : {
+              "texte" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, heading2, strong, em, hyperlink, list-item, o-list-item",
+                  "label" : "Texte",
+                  "placeholder" : "Racontez votre histoire..."
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "telechargement_cta" : {
+            "type" : "Slice",
+            "fieldset" : "Téléchargement CTA",
+            "description" : "Bloc e-mail pour téléchargement guide",
+            "icon" : "cloud_download",
+            "non-repeat" : {
+              "accroche" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Accroche",
+                  "placeholder" : "Accroche CTA"
+                }
+              },
+              "sous-titre" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Sous-titre",
+                  "placeholder" : "Sous-titre"
+                }
+              },
+              "email_placeholder" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Email placeholder",
+                  "placeholder" : "tata@toto.com"
+                }
+              },
+              "libelle_du_bouton" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Libellé du bouton",
+                  "placeholder" : "Libellé du bouton"
+                }
+              },
+              "fichier" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "media",
+                  "label" : "Fichier",
+                  "placeholder" : "Fichier à télécharger"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "image_large" : {
+            "type" : "Slice",
+            "fieldset" : "Image large",
+            "description" : "Image large",
+            "icon" : "image",
+            "non-repeat" : {
+              "large_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 725,
+                    "height" : 340
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Large image"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  },
+  "Meta" : {
+    "date_de_mise_a_jour_affichee" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "Date de mise à jour affichée"
+      }
+    },
+    "auteur" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "author" ],
+        "label" : "Auteur",
+        "placeholder" : "Sélectionner un auteur"
+      }
+    },
+    "country" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "masks" : [ "infos_pratiques" ],
+        "label" : "Pays concerné",
+        "placeholder" : "Sélectionner le pays concerné"
+      }
+    }
+  },
+  "SEO & Social" : {
+    "meta_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta title",
+        "placeholder" : "Meta title"
+      }
+    },
+    "meta_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta description",
+        "placeholder" : "Meta description"
+      }
+    },
+    "body1" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "twitter_card" : {
+            "type" : "Slice",
+            "fieldset" : "Twitter Card",
+            "description" : "Champs spécifiques pour Twitter",
+            "icon" : "short_text",
+            "non-repeat" : { },
+            "repeat" : { }
+          },
+          "facebook_card" : {
+            "type" : "Slice",
+            "fieldset" : "Facebook Card",
+            "description" : "Facebook Card",
+            "icon" : "thumb_up",
+            "non-repeat" : { },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}

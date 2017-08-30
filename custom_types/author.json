@@ -1,0 +1,46 @@
+{
+  "Main" : {
+    "nom_de_l_auteur" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Nom de l'auteur",
+        "placeholder" : "Nom de l'auteur"
+      }
+    },
+    "photo_de_l_auteur" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : null,
+          "height" : null
+        },
+        "thumbnails" : [ {
+          "name" : "thumb",
+          "width" : 40,
+          "height" : 40
+        } ],
+        "label" : "Photo de l'auteur"
+      }
+    },
+    "image_de_background" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : null,
+          "height" : null
+        },
+        "thumbnails" : [ ],
+        "label" : "Image de background"
+      }
+    },
+    "biographie" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, heading2, strong, hyperlink",
+        "label" : "Biographie",
+        "placeholder" : "Biographie"
+      }
+    }
+  }
+}

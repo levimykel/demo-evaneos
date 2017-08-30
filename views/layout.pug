@@ -1,0 +1,33 @@
+block variables
+
+html.fixedsticky-withoutfixedfixed(lang='fr')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    link(rel='shortcut icon', href='images/favicon.png', type='image/png')
+    // - Title
+    title Voyage Pérou: Formalités pour le Pérou | Evaneos
+    // - Meta
+    meta(name='description', content='Voici les formalités à remplir pour se rendre au Pérou et être en règle avec les autorités...')
+    meta(name='robots', content='NOODP')
+    link(rel='stylesheet', href='https://static4.evaneos.fr/varanasi/stylesheets/vendor-20170828095819-v22.16.0+1-f4d94f.css')
+    link(rel='stylesheet', href='https://static5.evaneos.fr/varanasi/stylesheets/main-20170828095819-v22.16.0+1-f4d94f.css')
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/site-styles.css')
+    // - End Meta
+    
+    // - Required for Previews and Experiments
+    script(src="//code.jquery.com/jquery-2.1.1.min.js")
+    script
+      = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+    script(src="//static.cdn.prismic.io/prismic.min.js")
+    script(src='/javascript/main.js')
+  
+  body(data-wio-id=activeDoc.id)
+
+    include ./layout/header.pug
+
+    block body
+
+    include ./layout/footer.pug
+

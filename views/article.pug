@@ -1,0 +1,36 @@
+extends ./layout.pug
+
+block variables
+  - var activeDoc = page
+
+block body
+
+  section.page-section
+    .container
+      .row
+        .col-md-9
+          .card-ticket.card-ticket-content.article
+            h1.article-title !{RichText.asText(page.data.title)}
+            .article-content
+              .aticle-photo-container
+                img.card-ticket-content-photo(src=page.data.hero_image.url)
+            h3.article-subtitle
+            .article-content
+            
+              -// Display the slices
+              for slice in page.data.body
+                case slice.slice_type
+                  when 'texte'
+                    != RichText.asHtml(slice.primary.texte, ctx.linkResolver)
+                  when 'image_large'
+                    .aticle-photo-container
+                      img.card-ticket-content-photo(src=slice.primary.large_image.url)
+                  when 'telechargement_cta'
+                    include ./article/tele-cta.pug
+                    
+            include ./article/signature.pug
+          
+          include ./article/itineraries.pug
+          
+        include ./article/sidebar-article.pug
+  

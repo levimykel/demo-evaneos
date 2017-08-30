@@ -1,0 +1,111 @@
+{
+  "Main" : {
+    "pays" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Pays",
+        "placeholder" : "Pays"
+      }
+    },
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "URL Slug"
+      }
+    },
+    "articles_mis_en_avant" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "article_en_avant" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "article" ],
+              "label" : "Article en avant"
+            }
+          },
+          "image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : {
+                "width" : 260,
+                "height" : 160
+              },
+              "thumbnails" : [ ],
+              "label" : "Image"
+            }
+          }
+        },
+        "label" : "Articles mis en avant"
+      }
+    }
+  },
+  "Infos essentielles" : {
+    "titre" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "Titre",
+        "placeholder" : "Les informations essentielles pour partir..."
+      }
+    },
+    "accroche" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph, strong",
+        "label" : "Accroche",
+        "placeholder" : "Accroche"
+      }
+    },
+    "quand_partir" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, hyperlink",
+        "label" : "Quand partir",
+        "placeholder" : "Quand partir"
+      }
+    },
+    "formalites" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, hyperlink",
+        "label" : "Formalités",
+        "placeholder" : "Formalités"
+      }
+    },
+    "sante" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, hyperlink",
+        "label" : "Santé",
+        "placeholder" : "Santé"
+      }
+    },
+    "billet" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, hyperlink",
+        "label" : "Billet d'avion",
+        "placeholder" : "Billet d'avion"
+      }
+    },
+    "decalage" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, hyperlink",
+        "label" : "Décalage horaire",
+        "placeholder" : "Décalage horaire"
+      }
+    },
+    "langue" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, hyperlink",
+        "label" : "Langue",
+        "placeholder" : "Langue"
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+extends ./layout.pug
+
+block variables
+  - var activeDoc = page
+
+block body
+
+  section.page-section
+    .container
+      .row
+        .col-md-9
+          
+          include ./info/info-featured.pug
+          
+          .card-ticket-content.card-ticket.article.practical-1-article
+            h1.section-title
+              != RichText.asText(page.data.titre)
+            h3.article-subtitle
+              != RichText.asHtml(page.data.accroche, ctx.linkResolver)
+            .practical-introduction-more
+              a.btn.btn-thirdary Lire la suite
+            .article-content.practical-article-main
+              h2.article-paratitle Quand partir
+              != RichText.asHtml(page.data.quand_partir, ctx.linkResolver)
+              
+              h2.article-paratitle Formalités d'entrée
+              != RichText.asHtml(page.data.formalites, ctx.linkResolver)
+
+              h2.article-paratitle Santé
+              != RichText.asHtml(page.data.sante, ctx.linkResolver)
+
+              h2.article-paratitle Billet d'avion
+              != RichText.asHtml(page.data.billet, ctx.linkResolver)
+
+              h2.article-paratitle Décalage horaire
+              != RichText.asHtml(page.data.decalage, ctx.linkResolver)
+
+              h2.article-paratitle Langue
+              != RichText.asHtml(page.data.langue, ctx.linkResolver)
+
+              include ./info/info-addresse.pug
+          
+          .card-ticket.card-ticket-content
+            a(href='#')
+              h2.section-title Préparer son départ au !{RichText.asText(page.data.pays)}
+            .practical-results.article-2-list
+              .pagination-page
+                
+                for article in articles.results
+                
+                  .article-2
+                    .article-2-image-wrap
+                      a.article-2-image-link(href=ctx.linkResolver(article))
+                        img.article-2-image(src=article.data.hero_image.thumb.url)
+                        .copyright-container.copyright-small.copyright-to-right
+                    .article-2-content
+                      a(href=ctx.linkResolver(article))
+                        h3.article-2-title !{RichText.asText(article.data.title)}
+                      .article-2-subtitle !{RichText.asText(article.data.description)}
+                      .article-2-infos
+                        span.author-link
+                          span.article-2-author 
+                            != RichText.asText(article.data.auteur.data.nom_de_l_auteur)
+                          - var date = new Date(article.data.date_de_mise_a_jour_affichee)
+                          - var months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+                          span.article-2-date !{date.getDate()} !{months[date.getMonth()]} !{date.getFullYear()}
+                      .article-2-tag-practical
+
+        include ./info/info-sidebar.pug
+
+

@@ -1,0 +1,17 @@
+.signature2
+  .signature2-head
+    .signature2-infos
+      div
+        .signature2-photo
+          - var authorImage = page.data.auteur.data.photo_de_l_auteur.thumb.url
+          span.face-picture(style="background: url('" + authorImage + "')")
+      .signature2-author
+        span.author-link(data-rel='#')
+          != RichText.asText(page.data.auteur.data.nom_de_l_auteur)
+        br
+        span.author-contribution 897 contributions
+
+      - var date = new Date(page.data.date_de_mise_a_jour_affichee)
+      - var months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+
+      .signature2-date Mis à jour le !{date.getDate()} !{months[date.getMonth()]} !{date.getFullYear()}

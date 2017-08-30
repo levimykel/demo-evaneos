@@ -1,0 +1,83 @@
+.header-white
+  .header-white-item.header-white-mobnav
+    a(href='/', data-analytics='on', data-analytics-category='vara_header', data-analytics-action='header_section', data-analytics-label='logo_evaneos')
+      i.header-white-logo.sprcom.sprcom-evaneos-logo-brand
+    .header-white-mobnav-icons
+      button.header-white-mobnav-open
+        i.iconvar.magnifying
+      button.header-white-mobnav-open
+        i.iconvar.phone
+      button.header-white-mobnav-open
+        i.iconvar.menu-burger
+    .header-white-mobnav-call.header-white-call
+      .header-white-call-tooltip
+        | Nous restons à votre écoute du lundi au vendredi de 9h00 à 19h00
+      .header-white-call-text
+        | Contactez-nous au
+        a.header-white-call-number(href='#') 01 82 83 36 36
+  .header-white-item.header-white-links-container(data-menu='links')
+    ul.header-white-links
+      li.header-white-link-wrap
+        a.header-white-link.header-white-dropdown-link(href='#') Destinations
+      li.header-white-link-wrap
+        a.header-white-link.header-white-dropdown-link(href='#') Où partir ?
+      li.header-white-link-wrap
+        a.header-white-link(href='#') Concept
+  .header-white-item.header-white-search(data-menu='search')
+    .search-header
+      .search-header-table-container
+        .search-header-table
+          .search-header-icon-container
+            i.iconvar.magnifying
+          .search-header-input-container
+            input.search-header-input(type='text', placeholder='Rechercher...')
+      .search-header-results
+  .header-white-item.header-white-user-container(data-menu='links')
+    a.header-white-link(href='#')
+      i.iconvar.guy
+      span Se connecter
+  .header-white-item.header-white-call(data-menu='call')
+    i.header-white-call-image.sprcom.sprcom-phone-agent-traveler
+    .header-white-call-title
+      | Service voyageur
+    .header-white-call-tooltip
+      | Nous restons à votre écoute du lundi au vendredi de 9h00 à 19h00
+    .header-white-call-text
+      | Contactez-nous au 
+      a.header-white-call-number(href='#') 01 82 83 36 36
+    a.header-white-call-number(href='tel:+33182833636', data-analytics='on', data-analytics-category='vara_header', data-analytics-action='header_section', data-analytics-label='mobile_call_cta')
+      button.btn.btn-primary.header-white-call-button Appeler le service voyageur
+section.page-section.page-section-medium-padding.page-section-background.page-section-header-shadow(style="background-image: url('https://static5.evaneos.fr/images/reduction/904048_w-1980_h-620_q-50_m-crop.jpg')")
+  .page-section-header.page-section-bottom-container
+    .container
+      .page-section-header-title-small
+        | Guide de voyage Pérou
+      .breadcrumb.colgate.shadow(itemprop='breadcrumb')
+        a.breadcrumb-link(href='#') Accueil
+        a.breadcrumb-link(href='#') &nbsp;Pérou
+        a.breadcrumb-link(href='#') &nbspGuide de voyage
+        a.breadcrumb-link(href='/perou/voyage/informations-pratiques/') &nbspInformations pratiques
+        if page.type == 'article'
+          a.breadcrumb-link(href=ctx.linkResolver(page)) &nbsp!{RichText.asText(page.data.title)}
+nav.navbar-white.follscroll
+  .navbar-white-cta-container
+    span.btn.btn-primary.navbar-white-cta(data-rel='#') Contacter une agence locale
+  ul.navbar-white-links
+    li.navbar-white-item
+      a.navbar-white-link(href='#') Voyage Pérou
+    li.navbar-white-item
+      a.navbar-white-link(href='#') Idées de circuits
+    li.navbar-white-item
+      a.navbar-white-link(href='#') Agences locales
+    li.navbar-white-item
+      a.navbar-white-link(href='#') Que voir ?
+    li.navbar-white-item.navbar-white-item-open
+      a.navbar-white-link.navbar-white-open(href='#')
+        | Guide de voyage
+        i.iconvar.arrow-down
+      .navbar-white-down
+        a.navbar-white-link(href='/') Infos pratiques
+        a.navbar-white-link(href='/') Carnets de voyage
+        a(href='/') Guide de voyage
+.navbar-white-mobile-cta-container
+  span.btn.btn-primary.navbar-white-cta(data-rel='#') Contacter une agence locale
